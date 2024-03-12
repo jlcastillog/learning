@@ -1,0 +1,6 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/ARQUITECTURA .NET/Pacagroup.Ecommerce/.vs/Pacagroup.Ecommerce
+/ARQUITECTURA .NET/Pacagroup.Ecommerce.Consumer/.vs

@@ -1,0 +1,5 @@
+@Pacagroup.Ecommerce.Services.WebApi_HostAddress = http://localhost:5294
+
+GET {{Pacagroup.Ecommerce.Services.WebApi_HostAddress}}/api/customers/GetAll
+
+###
