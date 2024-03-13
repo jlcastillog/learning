@@ -1,0 +1,1 @@
+Proyecto para el curso Platzi de "Introducción al desarrollo frontend"
