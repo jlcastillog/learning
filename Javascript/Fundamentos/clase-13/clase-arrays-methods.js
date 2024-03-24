@@ -48,3 +48,15 @@ const wordFrecuency = words.reduce((accumulator, currentValue) => {
 
 console.log(words)
 console.log(wordFrecuency)
+
+// find()
+
+const multipleOf5 = [5, 10, 15, 20]
+const firstNumberGreaterThan10 = multipleOf5.find(number => number > 10)
+
+console.log(multipleOf5)
+console.log(firstNumberGreaterThan10)
+
+// finIndex()
+const firstNumberGreaterThan10Index = multipleOf5.findIndex(number => number > 10)
+console.log(firstNumberGreaterThan10Index)
