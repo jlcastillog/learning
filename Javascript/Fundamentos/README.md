@@ -1,6 +1,9 @@
 #  Proyecto para el curso Platzi de "Curso de JavaScript Desde Cero" 
 
-<img src="https://cdn-icons-png.flaticon.com/128/1199/1199124.png" width="6%">  https://platzi.com/cursos/javascript-fundamentos/
+<p>
+<img src="https://cdn-icons-png.flaticon.com/128/1199/1199124.png" width="6%">
+</p>
+<p><a href="https://platzi.com/cursos/javascript-fundamentos/">Enlace al curso</a></P>
 
 ## Temario
 
