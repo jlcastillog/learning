@@ -1,0 +1,12 @@
+{
+  "name": "react-curso",
+  "version": "1.0.0",
+  "description": "<h1>Curso de REACT <img src=\"https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg\" width=\"5%\"></h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
