@@ -42,3 +42,18 @@ Instalar el pluggin de Visual Code "ESLint"
 En Google Chrome puedes instalar la extesion:
 
 ![alt text](image3.png)
+
+
+## Desplegar en producción
+
+Desde la terminal ejecutar:
+
+> npm run build
+
+Esto te genera el paquete para desplegar:
+
+![alt text](image4.png)
+
+Puede usar esta pagina para desplegar tu web: [Netlify Drop](https://app.netlify.com/drop)
+
+Para ello solo tienes que arrastar la carpeta del depliegue ("dist") en la zona indicada de la web.
