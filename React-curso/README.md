@@ -10,31 +10,8 @@ En caso de neceistar consultar documentacion puedes consultar estos enlaces:
 - https://www.reactjs.wiki/
 
 
-## Comenzar proyecto
-
-Para la gestion de paquetes vamos a usar "npm", asique para inicializar un proyecto usamos el comando:
-
-> npm init -y
-
-Ahora para crear el proyecto usaremos [Vite](https://vitejs.dev/) con el comando:
-
-> npm create vite@latest
-
-Pasos:
-- Introducir nombre del poyecto
-- Tipo de soporte (en nuestro caso seleccionamos React)
-- Lenguaje (nosotros usaremos Javascript + *[SWC](https://swc.rs/))
-
-*SWC -> Transpilador
-
-Ultimo pase seria instalar las depencias del proyecto. Para ello, ubicado desde la terminal en la carpeta del proyecto se usa el comando:
-
->npm install
-
-Para inicializar nuestro proyecto debes de usar:
-
->npm run dev
-
-Aparecera algo asi:
-
-![alt text](image.png)
+| Número | Proyecto | Código |
+| --- | --- | --- | 
+| `01` | Twitter Follow Card | [Ver](projects/01-twitter-follow-card/) |
+| `02` | Tic Tac Toe | [Ver](projects/02-tic-tac-toe/) |
+| `03` | Mouse Follower | [Ver](projects/03-mouse-follower) |
