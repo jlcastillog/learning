@@ -1,4 +1,4 @@
-import { WINNER_COMBOS, SHIFTS } from "../constants"
+import { WINNER_COMBOS } from "../constants"
 
 export const checkWinnerFrom = (boardToCheck) => {
     // Check all winner combination to know 
