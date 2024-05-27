@@ -57,3 +57,44 @@ Esto te genera el paquete para desplegar:
 Puede usar esta pagina para desplegar tu web: [Netlify Drop](https://app.netlify.com/drop)
 
 Para ello solo tienes que arrastar la carpeta del depliegue ("dist") en la zona indicada de la web.
+
+## Como crear un proyecto react sin usar la template de vite
+
+1. Crea el proyecto:
+
+> npm create vite@latest
+
+2. Seleccionar vanilla para que no te cree la planitlla y tengas que hacer tu manualmente
+
+3. Seleccionar lenguaje (javascript)
+
+4. Situarte en al carpeta del proyecto e instalar el siguiente pluging de vite:
+
+> npm install @vitejs/plugin-react -E
+
+5. Instalar dependencias_
+
+> npm install react react-dom -E
+
+6. Añadir configuración de vite:
+
+	1. Crear fichero vite.config.js en la raiz del proeycto
+	2. Añadir este contenido:
+	
+>import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+export default defineConfig({
+  plugins: [react()]
+})	
+
+Puedes encontrar la inforamción de este ficheor en la siguiente url: https://vitejs.dev/config/
+
+7. Instalar linter:
+
+> npm install standar -D
+
+Añadir esta configuraci´n en el archivo package.json
+
+>"eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json" 
+  }
