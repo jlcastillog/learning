@@ -72,7 +72,7 @@ Para ello solo tienes que arrastar la carpeta del depliegue ("dist") en la zona 
 
 > npm install @vitejs/plugin-react -E
 
-5. Instalar dependencias_
+5. Instalar dependencias
 
 > npm install react react-dom -E
 
@@ -87,13 +87,13 @@ export default defineConfig({
   plugins: [react()]
 })	
 
-Puedes encontrar la inforamción de este ficheor en la siguiente url: https://vitejs.dev/config/
+Puedes encontrar la inforamción de este fichero en la siguiente url: https://vitejs.dev/config/
 
 7. Instalar linter:
 
-> npm install standar -D
+> npm install standard -D
 
-Añadir esta configuraci´n en el archivo package.json
+Añadir esta configuración en el archivo package.json
 
 >"eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json" 
