@@ -1,22 +1,10 @@
-import { useState, useEffect } from "react"
-import { URL_FACTS } from "./constants"
-import { CatImage } from "./CatImage"
+import { CatImage } from "./components/CatImage"
+import { useCatFact } from "./hooks/useCatFact"
 import './App.css'
 
-
 export function App () {
-    const [fact, setFact] = useState()
-    const [firstWord, setFirstWord] = useState()
 
-    useEffect(() => {
-        //Fectch random fact
-        fetch(URL_FACTS)
-            .then(response => response.json())
-            .then(data => {
-                setFact(data.fact)
-                setFirstWord(data.fact.split(' ')[0])
-            })
-    }, [])
+    const {fact, firstWord} = useCatFact()
 
     return (
         <main>
