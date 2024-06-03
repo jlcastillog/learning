@@ -98,3 +98,20 @@ Añadir esta configuración en el archivo package.json
 >"eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json" 
   }
+
+## Crear un test End-To-End con Playwright
+
+Para crear unos test con [Playwright](https://playwright.dev/docs/api/class-playwright):
+
+1. Instalar el paquete en el proyecto:
+
+> npm init playwright@lastest
+
+Puede seleccionar de momento las opciones por defecto que te solicita.
+
+2. Hay que cambiar la extension del fichero playwright.config.js a .cjs
+3. En el archivo del test (example.spec.js) cambiar el require por un import
+4. Crear tus test
+5. Ejecutar las pruebas:
+
+> npx playwright test
