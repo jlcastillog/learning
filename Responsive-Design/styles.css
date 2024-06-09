@@ -347,3 +347,132 @@ main {
     color: var(--warn-black);
     margin: 9px;
 }
+
+/*Section  main-info-container*/
+
+.main-info-container {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: var(--warn-black);
+}
+
+.main-info-container-icon {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+	top: calc(0% - 12.5px);
+	left: calc(50% - 20px);
+    background-image: url('./assets/icons/chip.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-info-container--title {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.main-info-container--title h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    margin-bottom: 32px;
+}
+
+.main-info-container--title p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color:#808080;
+}
+
+.main-items-container .main-item {
+    width: 90%;
+    height: 152px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 15px;
+    background-color: var(--warm-lack-1);
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main-items-container .main-item .main-item--icon-clock {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/icons/clock.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.main-items-container .main-item .main-item--icon-eye {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/icons/eye.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.main-items-container .main-item .main-item--icon-dollar {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/icons/dollar-sign.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.main-items-container .main-item .main-item--icon-check-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/icons/check-circle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.main-items-container .main-item h3 {
+    margin-left: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+    margin-bottom: 10px;
+}
+
+.main-items-container .main-item p {
+    margin-left: 15px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: #808080;
+    text-align: start;
+}
+
