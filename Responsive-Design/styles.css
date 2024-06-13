@@ -494,3 +494,138 @@ main {
     color: var(--just-white);
     padding-top: 30px;
 }
+
+.main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.plans--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.plans--title h2 {
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--warn-black);
+}
+
+.plans--title p {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.plans-container--slider {
+    display: flex;
+    height: 300px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 20px;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.plans-container--card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    background-color: var(--just-white);
+    /* Sombra */
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.plans-container--card > p {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: calc(0% - 15px);
+	left: calc(50% - 45px);
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+    color: var(--just-white);
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    text-align: center;
+    padding: 7px;
+}
+
+.card-container {
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.card-container h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card-container p {
+    width: 158px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: #757575;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.card-container--price p {
+    position: relative;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 6.2rem;
+    color: var(--warn-black);
+}
+
+.card-container--price span {
+    position: absolute;
+    top: 14px;
+    left: 35px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: var(--warn-black);
+}    
+
+.plan-card--button {
+    width: 150px;
+    height: 48px;
+    background-color: #faf8f7;
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--warn-black);
+}
+
+.plan-card--button span {
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    margin-left: 5px;
+    background-image: url('./assets/icons/arrow-right-orange.svg');
+    vertical-align: text-bottom;
+}
