@@ -150,6 +150,17 @@ main {
     color: #757575;
 }
 
+.main-table-container {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 20px;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 /* Curency table styles */
 
 .main-currency-table {
@@ -167,8 +178,6 @@ main {
     font-weight: bold;
     line-height: 2.3rem;
     color: var(--bitcoin-orange);
-    text-align: start;
-    padding-left: 20px;
 }
 
 .currency-table--container {
@@ -262,7 +271,6 @@ main {
 /* Comissions table styles */
 
 .main-commissions-table {
-    display: none;
     width: 70%;
     min-width: 235px;
     max-width: 500px;
@@ -277,8 +285,6 @@ main {
     font-weight: bold;
     line-height: 2.3rem;
     color: var(--secondary-blue);
-    text-align: start;
-    padding-left: 20px;
 }
 
 .commissions-table--container {
