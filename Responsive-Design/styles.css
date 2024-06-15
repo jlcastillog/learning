@@ -498,7 +498,7 @@ main {
 .main-plans-container {
     width: 100%;
     min-width: 320px;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
     text-align: center;
 }
 
@@ -542,7 +542,7 @@ main {
     position: relative;
     scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
     background-color: var(--just-white);
@@ -628,4 +628,41 @@ main {
     margin-left: 5px;
     background-image: url('./assets/icons/arrow-right-orange.svg');
     vertical-align: text-bottom;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    width: 100%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    gap: 10px;
+    width: 50%;
+    height: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    
+}
+
+.footer-links a {
+    color: var(--just-white);
+    text-decoration: none;
+}
+
+.footer-image {
+    align-self: center;
+    width: 64px;
+    height: 50px;
+    margin: 30px;
 }
