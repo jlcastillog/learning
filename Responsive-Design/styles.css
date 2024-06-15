@@ -397,7 +397,7 @@ main {
 }
 
 .main-items-container .main-item {
-    width: 90%;
+    width: 288px;
     height: 152px;
     display: flex;
     flex-direction: column;
@@ -636,7 +636,6 @@ footer {
     display: flex;
     width: 100%;
     min-width: 288px;
-    max-width: 900px;
     height: 150px;
     background-color: var(--bitcoin-orange);
 }
@@ -661,8 +660,10 @@ footer {
 }
 
 .footer-image {
+    width: 100%;
+    display: flex;
     align-self: center;
-    width: 64px;
+    justify-content: flex-end;
     height: 50px;
-    margin: 30px;
+    padding-right: 60px;
 }
