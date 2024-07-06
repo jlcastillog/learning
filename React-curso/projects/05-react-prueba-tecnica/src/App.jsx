@@ -2,19 +2,20 @@ import "./App.css";
 import { useMovies } from "./hooks/movies";
 import { useSearch } from "./hooks/search";
 import { Movies } from "./components/Movies";
-import { useRef } from "react";
 
 function App() {
   const { search, updateSearch, errorSearch } = useSearch();
   const { movies, getMovies, loading, errorLoadMovies } = useMovies({ search });
-  
+
   const handleSummit = (event) => {
     event.preventDefault();
-    getMovies();
+    getMovies({ search });
   };
 
   const handleChange = (event) => {
-    updateSearch(event.target.value);
+    const newSearch = event.target.value;
+    updateSearch(newSearch);
+    getMovies({ search });
   };
 
   return (
