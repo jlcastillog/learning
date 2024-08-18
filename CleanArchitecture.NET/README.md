@@ -55,3 +55,14 @@ Curso de Udemy para aprender los conceptos fundamentales de la Arquitectura de S
 35. [Tipo Predicate](https://www.udemy.com/course/clean-architecture-course/learn/lecture/43971658#overview)
 
 [Repo Link](https://github.com/jlcastillog/learning/tree/main/CleanArchitecture.NET/CleanArchitecture/FunctionalProgramming)
+
+### Sección 5: Principios SOLID
+
+36. [¿Qué son los principios SOLID?](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45190877#overview)
+37. [Principio de responsabilidad única (Single responsibility principle)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/43973078#overview)
+38. [Principio de abierto/cerrado (Open/closed principle)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/43973080#overview)
+39. [Principio de sustitución de Liskov (Liskov substitution principle)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/43973088#overview)
+40. [Principio de segregación de la interfaz (Interface segregation principle)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/43973092#overview)
+41. [Principio de inversión de la dependencia (Dependency inversion principle)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/43973100#overview)
+
+[Repo Link](https://github.com/jlcastillog/learning/tree/main/CleanArchitecture.NET/CleanArchitecture/SOLID)
