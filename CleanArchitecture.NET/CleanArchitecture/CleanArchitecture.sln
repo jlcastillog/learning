@@ -25,7 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestComponent", "TestCompon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperationComponent", "OperationComponent\OperationComponent.csproj", "{DF593331-33E1-44DF-8021-F2F510ABE74E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeersRepositoryComponent", "BeersRepositoryComponent\BeersRepositoryComponent.csproj", "{4FDFD851-D25E-4099-BF8C-399659F2DE74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeersRepositoryComponent", "BeersRepositoryComponent\BeersRepositoryComponent.csproj", "{4FDFD851-D25E-4099-BF8C-399659F2DE74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Section6", "Section6", "{46534EF1-3431-4A84-8C45-F72AE7F8359B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessComponent", "BusinessComponent\BusinessComponent.csproj", "{D5FE9914-2570-4A23-8269-9652270F0CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryComponent", "RepositoryComponent\RepositoryComponent.csproj", "{6AD2B16A-4CA6-48E7-8CCA-7D2344E47236}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +67,14 @@ Global
 		{4FDFD851-D25E-4099-BF8C-399659F2DE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FDFD851-D25E-4099-BF8C-399659F2DE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FDFD851-D25E-4099-BF8C-399659F2DE74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5FE9914-2570-4A23-8269-9652270F0CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FE9914-2570-4A23-8269-9652270F0CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FE9914-2570-4A23-8269-9652270F0CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FE9914-2570-4A23-8269-9652270F0CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD2B16A-4CA6-48E7-8CCA-7D2344E47236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD2B16A-4CA6-48E7-8CCA-7D2344E47236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD2B16A-4CA6-48E7-8CCA-7D2344E47236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD2B16A-4CA6-48E7-8CCA-7D2344E47236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +87,8 @@ Global
 		{87FF1ED4-A100-4CE5-A306-560503DBC1D1} = {E227EB04-2A94-4214-8AD7-C1B6C5248AA1}
 		{DF593331-33E1-44DF-8021-F2F510ABE74E} = {E227EB04-2A94-4214-8AD7-C1B6C5248AA1}
 		{4FDFD851-D25E-4099-BF8C-399659F2DE74} = {E227EB04-2A94-4214-8AD7-C1B6C5248AA1}
+		{D5FE9914-2570-4A23-8269-9652270F0CF1} = {46534EF1-3431-4A84-8C45-F72AE7F8359B}
+		{6AD2B16A-4CA6-48E7-8CCA-7D2344E47236} = {46534EF1-3431-4A84-8C45-F72AE7F8359B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77B00D19-6A02-41AE-A85E-025EDA4A38E5}
