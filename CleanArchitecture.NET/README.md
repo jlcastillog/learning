@@ -66,3 +66,52 @@ Curso de Udemy para aprender los conceptos fundamentales de la Arquitectura de S
 41. [Principio de inversión de la dependencia (Dependency inversion principle)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/43973100#overview)
 
 [Repo Link](https://github.com/jlcastillog/learning/tree/main/CleanArchitecture.NET/CleanArchitecture/SOLID)
+
+### Sección 6: Componentes
+
+42. [¿Qué es un componente?](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44552931#overview)
+43. [The Reuse-Release Equivalence Principle (REP)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44661201#overview)
+44. [The Common Closure Principle (CCP)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44661217#overview)
+45. [The Common Reuse Principle (CRP)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44661223#overview)
+46. [The Acyclic Dependencies Principle (ADP)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44674049#overview)
+47. [The Stable Dependencies Principle (SDP)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44674895#overview)
+48. [The Stable Abstractions Principle (SAP)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44674903#overview)
+
+### Section 7: Arquitectura de Software
+
+49. [¿Qué es una Arquitectura de Software?](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44785479#overview)
+50. [¿Qué es y que hace un Arquitecto de Software?](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44785485#overview)
+51. [¿De qué están hechos los Sistemas?](https://www.udemy.com/course/clean-architecture-course/learn/lecture/44785813#overview)
+52. [Comunicación entre componentes (explicación teórica)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45110433#overview)
+53. [Comunicación entre componentes (explicación práctica con código)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45110917#overview)
+54. [Inyección de Dependencias](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45111193#overview)
+55. [Componentes de alto nivel y bajo nivel](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45123259#overview)
+56. [¿Qué es una capa?](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45124379#overview)
+
+### Sección 8: Clean Architecture
+
+57. [¿Qué es Clean Architecture?](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45124963#overview)
+58. [La Regla de Dependencia](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45134543#overview)
+59. [Aclaraciones sobre Clean Architecture](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45157241#overview)
+60. [Entities (Capa Enterprise Business Rules)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45141535#overview)
+61. [Use Cases (Capa Application Business Rules)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45141539#overview)
+62. [Capa Interface Adapters](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45141545#overview)
+63. [Entity Framework (Capa Interface Adapters)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45162101#overview)
+64. [Repository (Capa Interface Adapters)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45162107#overview)
+65. [Capa Frameworks y Drivers](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45141551#overview)
+66. [Creación de Base de Datos (Capa Frameworks y Drivers)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45162119#overview)
+67. [Creación de API (Capa Frameworks y Drivers)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45162117#overview)
+68. [Inyección de Dependencias en API (Capa Frameworks y Drivers)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45162123#overview)
+69. [Models](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45238927#overview)
+70. [Creación del Componente Models (Capa Interface Adapters)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45239149#overview)
+71. [Uso de Generics en Interfaces](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45239425#overview)
+72. [¿Regresar Models o Entites en el componente Repository?](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45240451#overview)
+73. [Presenters](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45270029#overview)
+74. [Creación de interfaz IPresenter](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45270645#overview)
+75. [Creación de Presenter y ViewModel (Capa Interface Adapters)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45270945#overview)
+76. [Mappers y DTOs](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45271419#overview)
+77. [Creación del componente Mapper (Capa Interface Adapters)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45293411#overview)
+78. [Uso del Mapper y el DTO en el API (Capa Frameworks y Drivers)](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45293637#overview)
+79. [Análisis de las Capas y Componentes Utilizados.](https://www.udemy.com/course/clean-architecture-course/learn/lecture/45357469#overview)
+
+<img src="image.png" alt="Diagrama de clases" width="700" height="400"/>
