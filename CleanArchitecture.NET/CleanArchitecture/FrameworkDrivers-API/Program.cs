@@ -1,5 +1,6 @@
 using ApplicationLayer;
 using EnterpriseLayer;
+using FrameworkDrivers_API.Middlewares;
 using InterfaceAdapters_Data;
 using InterfaceAdapters_Mappers;
 using InterfaceAdapters_Mappers.Dtos.Requests;
@@ -35,6 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.MapGet("/beer", async (GetBeersUseCase<BeerEntity, BeerViewModel> beerUseCase) =>
 {
