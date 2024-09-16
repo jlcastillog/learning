@@ -1,6 +1,9 @@
 using ApplicationLayer;
 using EnterpriseLayer;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using FrameworkDrivers_API.Middlewares;
+using FrameworkDrivers_API.Validators;
 using InterfaceAdapters_Data;
 using InterfaceAdapters_Mappers;
 using InterfaceAdapters_Mappers.Dtos.Requests;
@@ -14,6 +17,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// validadores
+builder.Services.AddValidatorsFromAssemblyContaining<BeerValidator>();
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
 
 // dependencias
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -46,9 +54,19 @@ app.MapGet("/beer", async (GetBeersUseCase<BeerEntity, BeerViewModel> beerUseCas
 .WithName("beers")
 .WithOpenApi();
 
-app.MapPost("/beer", async (BeerRequestDto beerRequest, AddBeerUseCase<BeerRequestDto> addBeerUseCase) =>
+app.MapPost("/beer", async (BeerRequestDto beerRequest, 
+                            AddBeerUseCase<BeerRequestDto> addBeerUseCase,
+                            IValidator<BeerRequestDto> validator) =>
 {
+    var result = await validator.ValidateAsync(beerRequest);
+
+    if (!result.IsValid)
+    {
+        return Results.ValidationProblem(result.ToDictionary());
+    }
+
     await addBeerUseCase.ExecuteAsync(beerRequest);
+    return Results.Created();
 })
 .WithName("addBeer")
 .WithOpenApi(); ;
