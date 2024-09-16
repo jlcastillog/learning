@@ -1,4 +1,5 @@
-﻿using EnterpriseLayer;
+﻿using ApplicationLayer.Exceptions;
+using EnterpriseLayer;
 
 namespace ApplicationLayer
 {
@@ -18,7 +19,7 @@ namespace ApplicationLayer
             var beerEntity = _mapper.ToEntity(beerDto);
 
             if (string.IsNullOrEmpty(beerEntity.Name))
-                throw new Exception("El nombre de la cerveza es obligatorio");
+                throw new ValidationException("El nombre de la cerveza es obligatorio");
 
             await _beerRepository.AddAsync(beerEntity);
         }
