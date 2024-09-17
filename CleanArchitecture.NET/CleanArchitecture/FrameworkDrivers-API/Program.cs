@@ -30,8 +30,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 builder.Services.AddScoped<IRepository<BeerEntity>, Repository>();
 builder.Services.AddScoped<IPresenter<BeerEntity, BeerViewModel>, BeerPresenter>();
+builder.Services.AddScoped<IPresenter<BeerEntity, BeerDetailViewModel>, BeerDetailPresenter>();
 builder.Services.AddScoped<IMapper<BeerRequestDto, BeerEntity>, BeerMapper>();
 builder.Services.AddScoped<GetBeersUseCase<BeerEntity, BeerViewModel>>();
+builder.Services.AddScoped<GetBeersUseCase<BeerEntity, BeerDetailViewModel>>();
 builder.Services.AddScoped<AddBeerUseCase<BeerRequestDto>>();
 
 var app = builder.Build();
@@ -69,7 +71,14 @@ app.MapPost("/beer", async (BeerRequestDto beerRequest,
     return Results.Created();
 })
 .WithName("addBeer")
-.WithOpenApi(); ;
+.WithOpenApi();
+
+app.MapGet("/beerDetail", async (GetBeersUseCase<BeerEntity, BeerDetailViewModel> beerUseCase) =>
+{
+    return await beerUseCase.ExecuteAsync();
+})
+.WithName("beerDetail")
+.WithOpenApi();
 
 app.Run();
 
