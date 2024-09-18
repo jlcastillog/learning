@@ -4,6 +4,9 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using FrameworkDrivers_API.Middlewares;
 using FrameworkDrivers_API.Validators;
+using FrameworkDrivers_ExternalService;
+using Interface_Adapters_Adapter;
+using Interface_Adapters_Adapter.Dtos;
 using InterfaceAdapters_Data;
 using InterfaceAdapters_Mappers;
 using InterfaceAdapters_Mappers.Dtos.Requests;
@@ -28,13 +31,33 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+// Repository
 builder.Services.AddScoped<IRepository<BeerEntity>, Repository>();
+
+// Presenters
 builder.Services.AddScoped<IPresenter<BeerEntity, BeerViewModel>, BeerPresenter>();
 builder.Services.AddScoped<IPresenter<BeerEntity, BeerDetailViewModel>, BeerDetailPresenter>();
+
+// Services
+builder.Services.AddScoped<IExternalService<PostServiceDto>, PostService>();
+builder.Services.AddHttpClient<IExternalService<PostServiceDto>, PostService>(c =>
+{
+    c.BaseAddress = new Uri(builder.Configuration["BaseUrlPost"]);
+});
+
+
+// Adapters
+builder.Services.AddScoped<IExternalServiceAdapter<PostEntity>, PostExternalServiceAdapter>();
+
+// Mappers
 builder.Services.AddScoped<IMapper<BeerRequestDto, BeerEntity>, BeerMapper>();
+
+//Use cases
 builder.Services.AddScoped<GetBeersUseCase<BeerEntity, BeerViewModel>>();
 builder.Services.AddScoped<GetBeersUseCase<BeerEntity, BeerDetailViewModel>>();
 builder.Services.AddScoped<AddBeerUseCase<BeerRequestDto>>();
+builder.Services.AddScoped<GetPostUseCase>();
 
 var app = builder.Build();
 
@@ -78,6 +101,13 @@ app.MapGet("/beerDetail", async (GetBeersUseCase<BeerEntity, BeerDetailViewModel
     return await beerUseCase.ExecuteAsync();
 })
 .WithName("beerDetail")
+.WithOpenApi();
+
+app.MapGet("/posts", async (GetPostUseCase postuseCase) =>
+{
+    return await postuseCase.ExecuteAsync();
+})
+.WithName("posts")
 .WithOpenApi();
 
 app.Run();

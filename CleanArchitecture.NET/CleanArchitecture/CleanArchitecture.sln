@@ -49,7 +49,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAdapters-Models", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAdapters-Presenters", "InterfaceAdapters-Presenters\InterfaceAdapters-Presenters.csproj", "{84A755F6-4055-4ED0-812B-1187B9D27792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAdapters-Mappers", "InterfaceAdapters-Mappers\InterfaceAdapters-Mappers.csproj", "{791C62DB-743F-47CC-ACC0-6792560F30BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAdapters-Mappers", "InterfaceAdapters-Mappers\InterfaceAdapters-Mappers.csproj", "{791C62DB-743F-47CC-ACC0-6792560F30BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface-Adapters-Adapter", "Interface-Adapters-Adapter\Interface-Adapters-Adapter.csproj", "{4D601DEA-0945-4B43-BA9D-FECFC0C17166}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkDrivers-ExternalService", "FrameworkDrivers-ExternalService\FrameworkDrivers-ExternalService.csproj", "{33D822B5-541F-4CDD-BFA6-5DCAE274FB26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkDrivers-Console", "FrameworkDrivers-Console\FrameworkDrivers-Console.csproj", "{3AE2E491-4CB7-465A-BF1C-45C7DC173E83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +131,18 @@ Global
 		{791C62DB-743F-47CC-ACC0-6792560F30BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{791C62DB-743F-47CC-ACC0-6792560F30BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{791C62DB-743F-47CC-ACC0-6792560F30BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D601DEA-0945-4B43-BA9D-FECFC0C17166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D601DEA-0945-4B43-BA9D-FECFC0C17166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D601DEA-0945-4B43-BA9D-FECFC0C17166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D601DEA-0945-4B43-BA9D-FECFC0C17166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D822B5-541F-4CDD-BFA6-5DCAE274FB26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D822B5-541F-4CDD-BFA6-5DCAE274FB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D822B5-541F-4CDD-BFA6-5DCAE274FB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D822B5-541F-4CDD-BFA6-5DCAE274FB26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE2E491-4CB7-465A-BF1C-45C7DC173E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE2E491-4CB7-465A-BF1C-45C7DC173E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE2E491-4CB7-465A-BF1C-45C7DC173E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE2E491-4CB7-465A-BF1C-45C7DC173E83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +165,9 @@ Global
 		{66E85597-668C-4270-A031-5D15CEBC0273} = {886686EA-E9CC-4CBA-8367-F4198D4AC7AB}
 		{84A755F6-4055-4ED0-812B-1187B9D27792} = {886686EA-E9CC-4CBA-8367-F4198D4AC7AB}
 		{791C62DB-743F-47CC-ACC0-6792560F30BF} = {886686EA-E9CC-4CBA-8367-F4198D4AC7AB}
+		{4D601DEA-0945-4B43-BA9D-FECFC0C17166} = {886686EA-E9CC-4CBA-8367-F4198D4AC7AB}
+		{33D822B5-541F-4CDD-BFA6-5DCAE274FB26} = {886686EA-E9CC-4CBA-8367-F4198D4AC7AB}
+		{3AE2E491-4CB7-465A-BF1C-45C7DC173E83} = {886686EA-E9CC-4CBA-8367-F4198D4AC7AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77B00D19-6A02-41AE-A85E-025EDA4A38E5}
