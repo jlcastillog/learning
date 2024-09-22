@@ -1,13 +1,13 @@
 ﻿namespace EnterpriseLayer
 {
-    public class Concept
+    public class ConceptEntity
     {
         public int IdBeer { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal Price { get; set; }
 
-        public Concept(int quantity, int idBeer, decimal unitPrice)
+        public ConceptEntity(int quantity, int idBeer, decimal unitPrice)
         {
             Quantity = quantity;
             IdBeer = idBeer;    

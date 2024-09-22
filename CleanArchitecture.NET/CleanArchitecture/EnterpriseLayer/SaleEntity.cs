@@ -1,20 +1,20 @@
 ﻿namespace EnterpriseLayer
 {
-    public class Sale
+    public class SaleEntity
     {
         public int Id { get; }
         public DateTime Date { get; set; }
         public decimal Total { get; set; }
-        public List<Concept> Concepts { get; set; }
+        public List<ConceptEntity> Concepts { get; set; }
 
-        public Sale(DateTime date, List<Concept> concepts)
+        public SaleEntity(DateTime date, List<ConceptEntity> concepts)
         {
             Date = date;
             Concepts = concepts;
             Total = GetTotal();
         }
 
-        public Sale(int id, DateTime date, List<Concept> concepts)
+        public SaleEntity(int id, DateTime date, List<ConceptEntity> concepts)
         {
             Id = id;
             Date = date;

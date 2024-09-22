@@ -4,18 +4,18 @@ using InterfaceAdapters_Mappers.Dtos.Requests;
 
 namespace InterfaceAdapters_Mappers
 {
-    public class SaleMapper : IMapper<SaleRequestDto, Sale>
+    public class SaleMapper : IMapper<SaleRequestDto, SaleEntity>
     {
-        public Sale ToEntity(SaleRequestDto input)
+        public SaleEntity ToEntity(SaleRequestDto input)
         {
-            var concepts = new List<Concept>();
+            var concepts = new List<ConceptEntity>();
 
             foreach (var conceptDto in input.Concepts)
             {
-                concepts.Add(new Concept(conceptDto.Quantity, conceptDto.Id, conceptDto.UnitPrice));
+                concepts.Add(new ConceptEntity(conceptDto.Quantity, conceptDto.Id, conceptDto.UnitPrice));
             }
 
-            var sale = new Sale(DateTime.Now, concepts);
+            var sale = new SaleEntity(DateTime.Now, concepts);
 
             return sale;
         }

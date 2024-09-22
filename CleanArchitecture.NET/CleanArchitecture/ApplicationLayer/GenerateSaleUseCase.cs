@@ -5,10 +5,10 @@ namespace ApplicationLayer
 {
     public class GenerateSaleUseCase<TDto>
     {
-        private readonly IRepository<Sale> _saleRepository;
-        private readonly IMapper<TDto, Sale> _mapper;
+        private readonly IRepository<SaleEntity> _saleRepository;
+        private readonly IMapper<TDto, SaleEntity> _mapper;
 
-        public GenerateSaleUseCase(IRepository<Sale> saleRepository, IMapper<TDto, Sale> mapper)
+        public GenerateSaleUseCase(IRepository<SaleEntity> saleRepository, IMapper<TDto, SaleEntity> mapper)
         {
             _saleRepository = saleRepository;
             _mapper = mapper;
