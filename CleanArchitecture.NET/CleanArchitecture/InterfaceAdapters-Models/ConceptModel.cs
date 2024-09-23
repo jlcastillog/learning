@@ -2,7 +2,7 @@
 {
     public class ConceptModel
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public int IdBeer { get; set; }
         public int IdSale { get; set; }
         public int Quantity { get; set; }

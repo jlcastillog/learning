@@ -34,6 +34,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Repository
 builder.Services.AddScoped<IRepository<BeerEntity>, Repository>();
+builder.Services.AddScoped<IRepository<SaleEntity>, SaleRepository>();
 
 // Presenters
 builder.Services.AddScoped<IPresenter<BeerEntity, BeerViewModel>, BeerPresenter>();
@@ -52,12 +53,14 @@ builder.Services.AddScoped<IExternalServiceAdapter<PostEntity>, PostExternalServ
 
 // Mappers
 builder.Services.AddScoped<IMapper<BeerRequestDto, BeerEntity>, BeerMapper>();
+builder.Services.AddScoped<IMapper<SaleRequestDto, SaleEntity>, SaleMapper>();
 
 //Use cases
 builder.Services.AddScoped<GetBeersUseCase<BeerEntity, BeerViewModel>>();
 builder.Services.AddScoped<GetBeersUseCase<BeerEntity, BeerDetailViewModel>>();
 builder.Services.AddScoped<AddBeerUseCase<BeerRequestDto>>();
 builder.Services.AddScoped<GetPostUseCase>();
+builder.Services.AddScoped<GenerateSaleUseCase<SaleRequestDto>>();
 
 var app = builder.Build();
 
@@ -108,6 +111,14 @@ app.MapGet("/posts", async (GetPostUseCase postuseCase) =>
     return await postuseCase.ExecuteAsync();
 })
 .WithName("posts")
+.WithOpenApi();
+
+app.MapPost("/sale", async (SaleRequestDto saleRequest,  GenerateSaleUseCase<SaleRequestDto> saleUseCase) =>
+{
+    await saleUseCase.ExecuteAsync(saleRequest);
+    return Results.Created();
+})
+.WithName("generaeteSale")
 .WithOpenApi();
 
 app.Run();

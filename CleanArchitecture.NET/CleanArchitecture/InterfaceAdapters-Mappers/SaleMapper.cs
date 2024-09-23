@@ -12,7 +12,7 @@ namespace InterfaceAdapters_Mappers
 
             foreach (var conceptDto in input.Concepts)
             {
-                concepts.Add(new ConceptEntity(conceptDto.Quantity, conceptDto.Id, conceptDto.UnitPrice));
+                concepts.Add(new ConceptEntity(conceptDto.Quantity, conceptDto.IdBeer, conceptDto.UnitPrice));
             }
 
             var sale = new SaleEntity(DateTime.Now, concepts);
