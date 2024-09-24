@@ -3,10 +3,11 @@ using EnterpriseLayer;
 using InterfaceAdapters_Data;
 using InterfaceAdapters_Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace InterfaceAdapters_Repository
 {
-    public class SaleRepository : IRepository<SaleEntity>
+    public class SaleRepository : IRepository<SaleEntity>, IRespositorySearch<SaleModel, SaleEntity>
     {
         private readonly AppDbContext _dbContext;
 
@@ -50,6 +51,17 @@ namespace InterfaceAdapters_Repository
                                     .Where(c => c.IdSale == saleModel.Id)
                                     .Select(c => new ConceptEntity(c.Quantity, c.IdBeer, c.UnitPrice))
                                     .ToList());
+        }
+
+        public async Task<IEnumerable<SaleEntity>> GetBySearchAsync(Expression<Func<SaleModel, bool>> predicate)
+        {
+            var salesModel = await _dbContext.Sales.Include("Concepts").Where(predicate).ToListAsync();
+
+            return salesModel.Select(s => new SaleEntity(s.Id, 
+                                                         s.CreationDate,
+                                                         _dbContext.Concepts.Where(c => c.IdSale == s.Id)
+                                                                            .Select(c => new ConceptEntity(c.Quantity, c.IdBeer, c.UnitPrice))
+                                                                            .ToList()));
         }
     }
 }

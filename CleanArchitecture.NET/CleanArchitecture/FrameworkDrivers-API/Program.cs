@@ -10,6 +10,7 @@ using Interface_Adapters_Adapter.Dtos;
 using InterfaceAdapters_Data;
 using InterfaceAdapters_Mappers;
 using InterfaceAdapters_Mappers.Dtos.Requests;
+using InterfaceAdapters_Models;
 using InterfaceAdapters_Presenters;
 using InterfaceAdapters_Repository;
 using Microsoft.EntityFrameworkCore;
@@ -35,6 +36,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Repository
 builder.Services.AddScoped<IRepository<BeerEntity>, Repository>();
 builder.Services.AddScoped<IRepository<SaleEntity>, SaleRepository>();
+builder.Services.AddScoped<IRespositorySearch<SaleModel, SaleEntity>, SaleRepository>();
 
 // Presenters
 builder.Services.AddScoped<IPresenter<BeerEntity, BeerViewModel>, BeerPresenter>();
@@ -62,6 +64,7 @@ builder.Services.AddScoped<AddBeerUseCase<BeerRequestDto>>();
 builder.Services.AddScoped<GetPostUseCase>();
 builder.Services.AddScoped<GenerateSaleUseCase<SaleRequestDto>>();
 builder.Services.AddScoped<GetSalesUseCase>();
+builder.Services.AddScoped<GetSalesBySearchUseCase<SaleModel>>();
 
 var app = builder.Build();
 
@@ -127,6 +130,13 @@ app.MapGet("/sales", async (GetSalesUseCase salesUseCase) =>
     return await salesUseCase.ExecuteAsync();
 })
 .WithName("sales")
+.WithOpenApi();
+
+app.MapGet("/salesSearch/{total}", async (GetSalesBySearchUseCase<SaleModel> saleSearchUseCase, int total) =>
+{
+    return await saleSearchUseCase.ExecuteAsync(s => s.Total > total);
+})
+.WithName("saleSearch")
 .WithOpenApi();
 
 app.Run();
