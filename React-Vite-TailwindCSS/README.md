@@ -23,5 +23,13 @@ npx tailwindcss init -p
 ## Ejecutar aplicación
 
 ```
-npm reun dev
+npm run dev
+```
+
+## Instalar React Router DOM
+
+Para el enrutamiento de las páginas usaremos el paquete react-router-dom.
+
+```
+npm install react-router-dom
 ```
