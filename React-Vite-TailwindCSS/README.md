@@ -33,3 +33,7 @@ Para el enrutamiento de las páginas usaremos el paquete react-router-dom.
 ```
 npm install react-router-dom
 ```
+
+## FakeStore API
+
+[Documentación de la API](https://fakeapi.platzi.com/)
