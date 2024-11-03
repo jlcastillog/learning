@@ -3,7 +3,6 @@ import ShoppingCartContext from "../../Context"
 
 const Card = (data) => {
   const context = useContext(ShoppingCartContext);
-  console.log(`Count ${context.count}`)
   return (
     <div className="bg-white cursor-pointer w-56 h-60 rounded-lg">
       <figure className="relative mb-2 w-full h-4/5">
