@@ -4,10 +4,16 @@ import ShoppingCartContext from "../../Context";
 
 const Card = (data) => {
   const context = useContext(ShoppingCartContext);
+
+  const showProduct = (productDetail) => {
+    context.showProductDetail();
+    context.setSelectedProduct(productDetail);
+  };
+
   return (
     <div
       onClick={() => {
-        context.showProductDetail();
+        showProduct(data.data);
       }}
       className="bg-white cursor-pointer w-56 h-60 rounded-lg"
     >
