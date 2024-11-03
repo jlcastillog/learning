@@ -37,3 +37,15 @@ npm install react-router-dom
 ## FakeStore API
 
 [Documentación de la API](https://fakeapi.platzi.com/)
+
+## Heroicons
+
+Libreria para el uso de iconos tanto en Vuew como React.
+
+[Enlace oficial de la libreria](https://heroicons.com/)
+
+Instalación para react:
+
+```
+npm install @heroicons/react
+```
