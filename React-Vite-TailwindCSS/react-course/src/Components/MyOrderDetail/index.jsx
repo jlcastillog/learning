@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import ShoppingCartContext from "../../Context";
+import OrderCard from "../../Components/OrderCard";
 import "./styles.css";
 
 const MyOrderDetail = () => {
@@ -17,6 +18,18 @@ const MyOrderDetail = () => {
               }}
               className="size-6 cursor-pointer"
             />
+          </div>
+          <div className="px-6">
+          {context.cartProducts.map((product) => {
+            return (
+              <OrderCard
+                key={product.id}
+                title={product.title}
+                imageUrl={product.images[0]}
+                price={product.price}
+              />
+            );
+          })}
           </div>
         </aside>
       )}
