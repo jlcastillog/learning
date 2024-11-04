@@ -11,7 +11,13 @@ export  const ShoppingCartProvider = ({ children }) => {
   const showProductDetail = () => setIsProductDetailVisible(true)
   const hideProductDetail = () => setIsProductDetailVisible(false)
 
+  const [isMyOrderDetailVisible, setIsMyOrderDetailVisible] = useState(false);
+  const showMyOrderDetail = () => setIsMyOrderDetailVisible(true)
+  const hideMyOrderDetail = () => setIsMyOrderDetailVisible(false)
+
   const [selectedProduct, setSelectedProduct] = useState({})
+
+  const [cartProducts, setCartProducts] = useState([])
 
   return (
     <ShoppingCartContext.Provider
@@ -22,7 +28,12 @@ export  const ShoppingCartProvider = ({ children }) => {
         hideProductDetail,
         isProductDetailVisible,
         selectedProduct,
-        setSelectedProduct
+        setSelectedProduct,
+        cartProducts,
+        setCartProducts,
+        showMyOrderDetail,
+        hideMyOrderDetail,
+        isMyOrderDetailVisible
       }}
     >
       {children}
