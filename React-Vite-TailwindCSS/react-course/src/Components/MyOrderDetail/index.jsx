@@ -6,6 +6,14 @@ import "./styles.css";
 
 const MyOrderDetail = () => {
   const context = useContext(ShoppingCartContext);
+
+  const handleDeleteProduct = (id) => {
+    const filtersProducts = context.cartProducts.filter(
+      (product) => product.id !== id
+    );
+    context.setCartProducts(filtersProducts);
+  };
+
   return (
     <>
       {context.isMyOrderDetailVisible && (
@@ -20,16 +28,18 @@ const MyOrderDetail = () => {
             />
           </div>
           <div className="px-6 overflow-y-auto">
-          {context.cartProducts.map((product) => {
-            return (
-              <OrderCard
-                key={product.id}
-                title={product.title}
-                imageUrl={product.images[0]}
-                price={product.price}
-              />
-            );
-          })}
+            {context.cartProducts.map((product) => {
+              return (
+                <OrderCard
+                  key={product.id}
+                  id={product.id}
+                  title={product.title}
+                  imageUrl={product.images[0]}
+                  price={product.price}
+                  handleDelete={handleDeleteProduct}
+                />
+              );
+            })}
           </div>
         </aside>
       )}
