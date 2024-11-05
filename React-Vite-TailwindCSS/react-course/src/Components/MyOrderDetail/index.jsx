@@ -19,7 +19,7 @@ const MyOrderDetail = () => {
               className="size-6 cursor-pointer"
             />
           </div>
-          <div className="px-6">
+          <div className="px-6 overflow-y-auto">
           {context.cartProducts.map((product) => {
             return (
               <OrderCard
