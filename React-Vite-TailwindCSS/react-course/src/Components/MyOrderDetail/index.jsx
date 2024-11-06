@@ -15,6 +15,18 @@ const MyOrderDetail = () => {
     context.setCartProducts(filtersProducts);
   };
 
+  const handleCheckout = () => {
+    const orderToAdd = {
+      date: "01.02.2024",
+      product: context.cartProducts,
+      totalProducts: context.cartProducts.lenght,
+      totalPrice: totalPrice(context.cartProducts),
+    };
+    context.setOrder([...context.order, orderToAdd]);
+
+    context.setCartProducts([])
+  };
+
   return (
     <>
       {context.isMyOrderDetailVisible && (
@@ -28,7 +40,7 @@ const MyOrderDetail = () => {
               className="size-6 cursor-pointer"
             />
           </div>
-          <div className="px-6 overflow-y-auto">
+          <div className="px-6 overflow-y-auto flex-1">
             {context.cartProducts.map((product) => {
               return (
                 <OrderCard
@@ -42,11 +54,14 @@ const MyOrderDetail = () => {
               );
             })}
           </div>
-          <div className="px-6">
-            <p className="flex justify-between items-center">
+          <div className="px-6 mb-6">
+            <p className="flex justify-between items-center mb-2">
               <span className="font-light">Total</span>
-              <span className="font-medium text-2xl">${totalPrice(context.cartProducts)}</span>
+              <span className="font-medium text-2xl">
+                ${totalPrice(context.cartProducts)}
+              </span>
             </p>
+            <button className="w-full py-3 bg-black text-white rounded-lg" onClick={() => handleCheckout()}>Checkout</button>
           </div>
         </aside>
       )}
