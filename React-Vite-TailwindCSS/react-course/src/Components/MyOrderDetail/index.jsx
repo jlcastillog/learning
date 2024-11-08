@@ -18,6 +18,7 @@ const MyOrderDetail = () => {
 
   const handleCheckout = () => {
     const orderToAdd = {
+      id: context.order.length ?? 0,
       date: "01.02.2024",
       products: context.cartProducts,
       totalProducts: context.cartProducts.lenght,

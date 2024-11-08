@@ -2,6 +2,7 @@ import { useRoutes, BrowserRouter } from "react-router-dom";
 import { ShoppingCartProvider } from "../../Context";
 import Home from "../Home";
 import MyAccount from "../MyAccount";
+import MyOrder from "../MyOrder";
 import MyOrders from "../MyOrders";
 import NotFound from "../NotFound";
 import SignIn from "../SignIn";
@@ -25,7 +26,11 @@ const AppRoutes = () => {
     },
     {
       path: "/my-orders/last",
-      element: <MyOrders />,
+      element: <MyOrder />,
+    },
+    {
+      path: "/my-orders/:id",
+      element: <MyOrder />,
     },
     {
       path: "/signin",
