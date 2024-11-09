@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
+import getProducts from '../Services/productService.js'
 
 export const ShoppingCartContext = createContext();
 
@@ -26,6 +27,13 @@ export const ShoppingCartProvider = ({ children }) => {
   // Order
   const [order, setOrder] = useState([]);
 
+  // Get products
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    getProducts(setProducts)
+  }, []);
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -43,6 +51,8 @@ export const ShoppingCartProvider = ({ children }) => {
         isMyOrderDetailVisible,
         order,
         setOrder,
+        products,
+        setProducts
       }}
     >
       {children}
