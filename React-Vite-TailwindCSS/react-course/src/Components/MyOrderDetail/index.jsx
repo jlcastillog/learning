@@ -21,7 +21,7 @@ const MyOrderDetail = () => {
       id: context.order.length ?? 0,
       date: "01.02.2024",
       products: context.cartProducts,
-      totalProducts: context.cartProducts.lenght,
+      totalProducts: context.cartProducts.length,
       totalPrice: totalPrice(context.cartProducts),
     };
     context.setOrder([...context.order, orderToAdd]);
