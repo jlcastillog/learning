@@ -10,6 +10,15 @@ function Home() {
   return (
     <>
       <Layout>
+        <div className="flex item-center justify-center relative w-80 mb-4">
+          <h1 className="font-medium text-xl">Prime Products</h1>
+        </div>
+        <input
+          className="border border-black rounded-lg w-80 p-2 mb-4"
+          type="text"
+          placeholder="Search a product"
+          onChange={(event) => {context.setsearchByTitle(event.target.value)}}
+        />
         <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
           {context.products?.map((product) => (
             <Card key={product.id} data={product} />

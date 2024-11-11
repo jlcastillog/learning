@@ -34,6 +34,9 @@ export const ShoppingCartProvider = ({ children }) => {
     getProducts(setProducts)
   }, []);
 
+  // Get products by title
+  const [searchByTitle, setsearchByTitle] = useState(null);
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -52,7 +55,9 @@ export const ShoppingCartProvider = ({ children }) => {
         order,
         setOrder,
         products,
-        setProducts
+        setProducts,
+        searchByTitle,
+        setsearchByTitle
       }}
     >
       {children}
