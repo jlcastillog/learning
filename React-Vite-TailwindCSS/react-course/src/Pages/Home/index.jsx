@@ -17,12 +17,18 @@ function Home() {
           className="border border-black rounded-lg w-80 p-2 mb-4"
           type="text"
           placeholder="Search a product"
-          onChange={(event) => {context.setsearchByTitle(event.target.value)}}
+          onChange={(event) => {
+            context.setsearchByTitle(event.target.value);
+          }}
         />
         <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
-          {context.products?.map((product) => (
-            <Card key={product.id} data={product} />
-          ))}
+          {context.searchByTitle
+            ? context.filteredProducts?.map((product) => (
+                <Card key={product.id} data={product} />
+              ))
+            : context.products?.map((product) => (
+                <Card key={product.id} data={product} />
+              ))}
         </div>
         <ProductDetail></ProductDetail>
       </Layout>

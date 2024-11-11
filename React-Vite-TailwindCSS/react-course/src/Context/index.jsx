@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext, useState, useEffect } from "react";
-import getProducts from '../Services/productService.js'
+import getProducts from "../Services/productService.js";
 
 export const ShoppingCartContext = createContext();
 
@@ -31,11 +31,26 @@ export const ShoppingCartProvider = ({ children }) => {
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
-    getProducts(setProducts)
+    getProducts(setProducts);
   }, []);
 
   // Get products by title
   const [searchByTitle, setsearchByTitle] = useState(null);
+
+  // Get filtered products
+  const [filteredProducts, setFilteredProducts] = useState(null);
+
+  const filterdItemsBytTitle = (products, filterByTitle) => {
+    return products?.filter((product) =>
+      product.title.toLowerCase().includes(filterByTitle.toLowerCase())
+    );
+  };
+
+  useEffect(() => {
+    if (searchByTitle) {
+      setFilteredProducts(filterdItemsBytTitle(products, searchByTitle));
+    }
+  }, [products, searchByTitle]);
 
   return (
     <ShoppingCartContext.Provider
@@ -57,7 +72,8 @@ export const ShoppingCartProvider = ({ children }) => {
         products,
         setProducts,
         searchByTitle,
-        setsearchByTitle
+        setsearchByTitle,
+        filteredProducts
       }}
     >
       {children}
