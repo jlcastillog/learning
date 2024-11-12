@@ -35,7 +35,7 @@ export const ShoppingCartProvider = ({ children }) => {
   }, []);
 
   // Get products by title
-  const [searchByTitle, setsearchByTitle] = useState(null);
+  const [searchByTitle, setSearchByTitle] = useState(null);
 
   // Get filtered products
   const [filteredProducts, setFilteredProducts] = useState(null);
@@ -46,11 +46,74 @@ export const ShoppingCartProvider = ({ children }) => {
     );
   };
 
+  // Get products by category
+  const [searchByCategory, setSearchByCategory] = useState(null);
+
+  const filterdItemsByCategory = (products, filterByCategory) => {
+    return products?.filter((product) =>
+      product.category.name
+        .toLowerCase()
+        .includes(filterByCategory.toLowerCase())
+    );
+  };
+
   useEffect(() => {
-    if (searchByTitle) {
-      setFilteredProducts(filterdItemsBytTitle(products, searchByTitle));
+    const filterBy = (
+      searchType,
+      products,
+      searchByTitle,
+      searchByCategory
+    ) => {
+
+      console.log("Category: ", searchByCategory)
+      console.log("filteredProducts: ", filteredProducts)
+
+      if (searchType === "BY_TITLE") {
+        return filterdItemsBytTitle(products, searchByTitle);
+      }
+
+      if (searchType === "BY_CATEGORY") {
+        return filterdItemsByCategory(products, searchByCategory);
+      }
+
+      if (searchType === "BY_TITLE_AND_CATEGORY") {
+        return filterdItemsBytTitle(
+          filterdItemsByCategory(products, searchByCategory),
+          searchByTitle
+        );
+      }
+
+      if (!searchType) {
+        return products;
+      }
+    };
+
+    if (searchByTitle && searchByCategory) {
+      setFilteredProducts(
+        filterBy(
+          "BY_TITLE_AND_CATEGORY",
+          products,
+          searchByTitle,
+          searchByCategory
+        )
+      );
     }
-  }, [products, searchByTitle]);
+    if (searchByTitle && !searchByCategory) {
+      setFilteredProducts(
+        filterBy("BY_TITLE", products, searchByTitle, searchByCategory)
+      );
+    }
+    if (!searchByTitle && searchByCategory) {
+      setFilteredProducts(
+        filterBy("BY_CATEGORY", products, searchByTitle, searchByCategory)
+      );
+    }
+    if (!searchByTitle && !searchByCategory) {
+      setFilteredProducts(
+        filterBy(null, products, searchByTitle, searchByCategory)
+      );
+    }
+  }, [products, searchByTitle, searchByCategory]);
 
   return (
     <ShoppingCartContext.Provider
@@ -72,8 +135,9 @@ export const ShoppingCartProvider = ({ children }) => {
         products,
         setProducts,
         searchByTitle,
-        setsearchByTitle,
-        filteredProducts
+        setSearchByTitle,
+        filteredProducts,
+        setSearchByCategory,
       }}
     >
       {children}

@@ -18,7 +18,7 @@ function Home() {
           type="text"
           placeholder="Search a product"
           onChange={(event) => {
-            context.setsearchByTitle(event.target.value);
+            context.setSearchByTitle(event.target.value);
           }}
         />
         <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
