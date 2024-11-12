@@ -22,13 +22,10 @@ function Home() {
           }}
         />
         <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
-          {context.searchByTitle
-            ? context.filteredProducts?.map((product) => (
-                <Card key={product.id} data={product} />
-              ))
-            : context.products?.map((product) => (
-                <Card key={product.id} data={product} />
-              ))}
+          {context.filteredProducts?.length > 0 &&
+            context.filteredProducts?.map((product) => (
+              <Card key={product.id} data={product} />
+            ))}
         </div>
         <ProductDetail></ProductDetail>
       </Layout>

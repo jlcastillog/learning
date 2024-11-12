@@ -65,9 +65,10 @@ export const ShoppingCartProvider = ({ children }) => {
       searchByCategory
     ) => {
 
+      console.log("searchType: ", searchType)
       console.log("Category: ", searchByCategory)
-      console.log("filteredProducts: ", filteredProducts)
-
+      console.log("Title: ", searchByTitle)
+      
       if (searchType === "BY_TITLE") {
         return filterdItemsBytTitle(products, searchByTitle);
       }
@@ -113,7 +114,13 @@ export const ShoppingCartProvider = ({ children }) => {
         filterBy(null, products, searchByTitle, searchByCategory)
       );
     }
+
+    return () => {
+      setSearchByTitle(null)
+    }
   }, [products, searchByTitle, searchByCategory]);
+
+  console.log("filteredProducts: ", filteredProducts)
 
   return (
     <ShoppingCartContext.Provider

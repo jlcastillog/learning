@@ -25,7 +25,6 @@ const MyOrderDetail = () => {
       totalPrice: totalPrice(context.cartProducts),
     };
     context.setOrder([...context.order, orderToAdd]);
-
     context.setCartProducts([]);
   };
 
