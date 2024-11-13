@@ -13,6 +13,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             onClick={() => {
+              context.setSearchByTitle(null);
               context.setSearchByCategory(null);
             }}
           >
@@ -23,6 +24,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             onClick={() => {
+              context.setSearchByTitle(null);
               context.setSearchByCategory(null);
             }}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -34,6 +36,7 @@ const Navbar = () => {
           <NavLink
             to="/clothes"
             onClick={() => {
+              context.setSearchByTitle(null);
               context.setSearchByCategory("clothes");
             }}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -45,6 +48,7 @@ const Navbar = () => {
           <NavLink
             to="/electronics"
             onClick={() => {
+              context.setSearchByTitle(null);
               context.setSearchByCategory("electronics");
             }}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -56,6 +60,7 @@ const Navbar = () => {
           <NavLink
             to="/furnitures"
             onClick={() => {
+              context.setSearchByTitle(null);
               context.setSearchByCategory("furnitures");
             }}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -67,6 +72,7 @@ const Navbar = () => {
           <NavLink
             to="/toys"
             onClick={() => {
+              context.setSearchByTitle(null);
               context.setSearchByCategory("toys");
             }}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -78,6 +84,7 @@ const Navbar = () => {
           <NavLink
             to="/others"
             onClick={() => {
+              context.setSearchByTitle(null);
               context.setSearchByCategory("others");
             }}
             className={({ isActive }) => (isActive ? activeStyle : undefined)}

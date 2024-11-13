@@ -114,10 +114,6 @@ export const ShoppingCartProvider = ({ children }) => {
         filterBy(null, products, searchByTitle, searchByCategory)
       );
     }
-
-    return () => {
-      setSearchByTitle(null)
-    }
   }, [products, searchByTitle, searchByCategory]);
 
   console.log("filteredProducts: ", filteredProducts)
