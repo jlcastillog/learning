@@ -53,3 +53,5 @@ npm install @heroicons/react
 ## Deploy
 
 Deployment with [Netlify](https://docs.netlify.com/cli/get-started/).
+
+Proyecto deplegado: [Ecommerce](https://jlcastillog-ecommerce.netlify.app/)
