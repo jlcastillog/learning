@@ -64,11 +64,6 @@ export const ShoppingCartProvider = ({ children }) => {
       searchByTitle,
       searchByCategory
     ) => {
-
-      console.log("searchType: ", searchType)
-      console.log("Category: ", searchByCategory)
-      console.log("Title: ", searchByTitle)
-      
       if (searchType === "BY_TITLE") {
         return filterdItemsBytTitle(products, searchByTitle);
       }
@@ -115,8 +110,6 @@ export const ShoppingCartProvider = ({ children }) => {
       );
     }
   }, [products, searchByTitle, searchByCategory]);
-
-  console.log("filteredProducts: ", filteredProducts)
 
   return (
     <ShoppingCartContext.Provider
