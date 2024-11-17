@@ -1,5 +1,7 @@
-import { useRoutes, BrowserRouter } from "react-router-dom";
+import { useContext } from "react";
+import { useRoutes, BrowserRouter, Navigate } from "react-router-dom";
 import { ShoppingCartProvider } from "../../Context";
+import ShoppingCartContext from "../../Context";
 import Home from "../Home";
 import MyAccount from "../MyAccount";
 import MyOrder from "../MyOrder";
@@ -12,30 +14,34 @@ import MyOrderDetail from "../../Components/MyOrderDetail";
 import "./App.css";
 
 const AppRoutes = () => {
+  const context = useContext(ShoppingCartContext);
+
+  const isSignOut = context.isSignOut;
+
   let routes = useRoutes([
     {
       path: "/",
-      element: <Home />,
+      element: !isSignOut ? <Home /> : <Navigate replace to={"/signin"} />,
     },
     {
       path: "/clothes",
-      element: <Home />,
+      element: !isSignOut ? <Home /> : <Navigate replace to={"/signin"} />,
     },
     {
       path: "/electronics",
-      element: <Home />,
+      element: !isSignOut ? <Home /> : <Navigate replace to={"/signin"} />,
     },
     {
       path: "/furnitures",
-      element: <Home />,
+      element: !isSignOut ? <Home /> : <Navigate replace to={"/signin"} />,
     },
     {
       path: "/toys",
-      element: <Home />,
+      element: !isSignOut ? <Home /> : <Navigate replace to={"/signin"} />,
     },
     {
       path: "/others",
-      element: <Home />,
+      element: !isSignOut ? <Home /> : <Navigate replace to={"/signin"} />,
     },
     {
       path: "/my-account",

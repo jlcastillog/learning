@@ -23,94 +23,79 @@ const Navbar = () => {
             Shopi
           </NavLink>
         </li>
-        {!isSignOut && (
-          <>
-            <li>
-              <NavLink
-                to="/"
-                onClick={() => {
-                  context.setSearchByTitle(null);
-                  context.setSearchByCategory(null);
-                }}
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-              >
-                All
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/clothes"
-                onClick={() => {
-                  context.setSearchByTitle(null);
-                  context.setSearchByCategory("clothes");
-                }}
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-              >
-                Clothes
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/electronics"
-                onClick={() => {
-                  context.setSearchByTitle(null);
-                  context.setSearchByCategory("electronics");
-                }}
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-              >
-                Electronics
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/furnitures"
-                onClick={() => {
-                  context.setSearchByTitle(null);
-                  context.setSearchByCategory("furnitures");
-                }}
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-              >
-                Furnitures
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/toys"
-                onClick={() => {
-                  context.setSearchByTitle(null);
-                  context.setSearchByCategory("toys");
-                }}
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-              >
-                Toys
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/others"
-                onClick={() => {
-                  context.setSearchByTitle(null);
-                  context.setSearchByCategory("others");
-                }}
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-              >
-                Others
-              </NavLink>
-            </li>
-          </>
-        )}
+
+        <li>
+          <NavLink
+            to="/"
+            onClick={() => {
+              context.setSearchByTitle(null);
+              context.setSearchByCategory(null);
+            }}
+            className={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            All
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/clothes"
+            onClick={() => {
+              context.setSearchByTitle(null);
+              context.setSearchByCategory("clothes");
+            }}
+            className={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Clothes
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/electronics"
+            onClick={() => {
+              context.setSearchByTitle(null);
+              context.setSearchByCategory("electronics");
+            }}
+            className={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Electronics
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/furnitures"
+            onClick={() => {
+              context.setSearchByTitle(null);
+              context.setSearchByCategory("furnitures");
+            }}
+            className={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Furnitures
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/toys"
+            onClick={() => {
+              context.setSearchByTitle(null);
+              context.setSearchByCategory("toys");
+            }}
+            className={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Toys
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/others"
+            onClick={() => {
+              context.setSearchByTitle(null);
+              context.setSearchByCategory("others");
+            }}
+            className={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Others
+          </NavLink>
+        </li>
       </ul>
       <ul className="flex items-center gap-3">
         <li className="text-black/60">{context.loggedUser?.email}</li>
@@ -143,9 +128,7 @@ const Navbar = () => {
             to="/signin"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
-            {isSignOut ?
-              "Sign In" : "Sign Out"
-            }
+            {isSignOut ? "Sign In" : "Sign Out"}
           </NavLink>
         </li>
         <li className="flex items-center justify-center gap-1">
