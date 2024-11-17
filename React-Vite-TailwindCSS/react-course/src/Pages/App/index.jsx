@@ -6,6 +6,7 @@ import MyOrder from "../MyOrder";
 import MyOrders from "../MyOrders";
 import NotFound from "../NotFound";
 import SignIn from "../SignIn";
+import SignUp from "../SignUp";
 import Navbar from "../../Components/Navbar";
 import MyOrderDetail from "../../Components/MyOrderDetail";
 import "./App.css";
@@ -55,6 +56,10 @@ const AppRoutes = () => {
     {
       path: "/signin",
       element: <SignIn />,
+    },
+    {
+      path: "/signup",
+      element: <SignUp />,
     },
     {
       path: "/*",

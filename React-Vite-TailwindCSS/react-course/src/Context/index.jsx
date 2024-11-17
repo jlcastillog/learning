@@ -111,6 +111,12 @@ export const ShoppingCartProvider = ({ children }) => {
     }
   }, [products, searchByTitle, searchByCategory]);
 
+  // Get isSignOut
+  const [isSignOut, setIsSignOut] = useState(true);
+
+  // Get signOut
+  const [loggedUser, setLoggedUser] = useState(null);
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -134,6 +140,10 @@ export const ShoppingCartProvider = ({ children }) => {
         setSearchByTitle,
         filteredProducts,
         setSearchByCategory,
+        isSignOut,
+        setIsSignOut,
+        loggedUser,
+        setLoggedUser,
       }}
     >
       {children}
