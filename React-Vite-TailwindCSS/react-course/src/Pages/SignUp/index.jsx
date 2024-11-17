@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import ShoppingCartContext from "../../Context";
 import { Layout } from "../../Components/Layout";
-import { addUser, saveLogin } from "../../Utils/Storage";
+import { addUser, saveLogin } from "../../Utils/storage";
 
 function SignUp() {
   const context = useContext(ShoppingCartContext);

@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ShoppingCartContext from "../../Context";
 import { Layout } from "../../Components/Layout";
-import { saveLogin, isValidUser } from "../../Utils/Storage";
+import { saveLogin, isValidUser } from "../../Utils/storage";
 
 function SignIn() {
   const context = useContext(ShoppingCartContext);
