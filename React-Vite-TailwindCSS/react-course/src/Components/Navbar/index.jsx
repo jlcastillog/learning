@@ -143,7 +143,9 @@ const Navbar = () => {
             to="/signin"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
-            Sign In
+            {isSignOut ?
+              "Sign In" : "Sign Out"
+            }
           </NavLink>
         </li>
         <li className="flex items-center justify-center gap-1">
