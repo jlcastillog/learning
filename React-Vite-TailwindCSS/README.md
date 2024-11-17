@@ -50,8 +50,14 @@ Instalación para react:
 npm install @heroicons/react
 ```
 
+## Continua con el curso: Prueba Técnica: E-commerce Profesional con React.js
+
+Implementar Local Storage en un Ecommerce profesional para completar el flujo de compra de los usuarios.
+
+[Enlace a la descripción del curso](https://platzi.com/cursos/laboratorio-react/)
+
 ## Deploy
 
-Deployment with [Netlify](https://docs.netlify.com/cli/get-started/).
+Deployment con [Netlify](https://docs.netlify.com/cli/get-started/).
 
 Proyecto deplegado: [Ecommerce](https://jlcastillog-ecommerce.netlify.app/)
