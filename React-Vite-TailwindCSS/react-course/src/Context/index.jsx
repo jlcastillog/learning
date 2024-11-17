@@ -64,11 +64,6 @@ export const ShoppingCartProvider = ({ children }) => {
       searchByTitle,
       searchByCategory
     ) => {
-
-      console.log("searchType: ", searchType)
-      console.log("Category: ", searchByCategory)
-      console.log("Title: ", searchByTitle)
-      
       if (searchType === "BY_TITLE") {
         return filterdItemsBytTitle(products, searchByTitle);
       }
@@ -116,7 +111,11 @@ export const ShoppingCartProvider = ({ children }) => {
     }
   }, [products, searchByTitle, searchByCategory]);
 
-  console.log("filteredProducts: ", filteredProducts)
+  // Get isSignOut
+  const [isSignOut, setIsSignOut] = useState(true);
+
+  // Get signOut
+  const [loggedUser, setLoggedUser] = useState(null);
 
   return (
     <ShoppingCartContext.Provider
@@ -141,6 +140,10 @@ export const ShoppingCartProvider = ({ children }) => {
         setSearchByTitle,
         filteredProducts,
         setSearchByCategory,
+        isSignOut,
+        setIsSignOut,
+        loggedUser,
+        setLoggedUser,
       }}
     >
       {children}

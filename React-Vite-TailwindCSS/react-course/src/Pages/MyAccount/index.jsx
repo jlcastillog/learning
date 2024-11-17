@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import ShoppingCartContext from "../../Context";
 import { Layout } from "../../Components/Layout";
 
 function MyAccount() {
+  const context = useContext(ShoppingCartContext);
+
   return (
     <>
       <Layout>
@@ -10,11 +14,13 @@ function MyAccount() {
         <div className="flex flex-col item-center justify-center w-80 mb-4">
           <p>
             <span className="font-light">Name: </span>
-            <span className="font-medium">jlcgalvez</span>
+            <span className="font-medium">
+              {context.loggedUser?.userName}
+            </span>
           </p>
           <p>
             <span className="font-light">Email: </span>
-            <span className="font-medium">jlcgalvez@gmail.com</span>
+            <span className="font-medium">{context.loggedUser?.email}</span>
           </p>
         </div>
         <div className="flex item-center justify-center w-80 mb-4">
