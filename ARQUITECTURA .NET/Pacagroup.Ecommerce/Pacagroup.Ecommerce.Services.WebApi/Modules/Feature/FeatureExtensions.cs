@@ -4,7 +4,7 @@ namespace Pacagroup.Ecommerce.Services.WebApi.Modules.Feature
 {
     public static class FeatureExtensions
     {
-        public static string myPolicy = "policyApiEcommenrce";
+        public static string myPolicy = "policyApiEcommerce";
 
         public static IServiceCollection AddFeature(this IServiceCollection services, IConfiguration configuration)
         {
