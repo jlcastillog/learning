@@ -8,10 +8,11 @@ const adminList = [
   { username: "jlcastillog", role: "admin", isAdmin: true },
   { username: "testuser", role: "user", isAdmin: false },
   { username: "guestuser", role: "guest", isAdmin: false },
+  { username: "editoruser", role: "editor", isAdmin: false },
 ];
 
 // Simulate a backend role list
-const rolesList = ["admin", "user", "guest"];
+const rolesList = ["admin", "user", "guest", "editor"];
 
 const AuthContext = React.createContext();
 

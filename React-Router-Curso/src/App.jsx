@@ -7,6 +7,7 @@ import { LoginPage } from "./Pages/LoginPage";
 import { LogoutPage } from "./Pages/LogoutPage";
 import { BlogPost } from "./Components/BlogPost";
 import { LoginErrorPage } from "./Pages/LoginErrorPage";
+import { EditBlogPage } from "./Pages/EditBlogPage";
 import { AuthProvider, AuthRoute } from "./Components/Auth";
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/edit-blog/:slug" element={<EditBlogPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route
               path="/logout"
