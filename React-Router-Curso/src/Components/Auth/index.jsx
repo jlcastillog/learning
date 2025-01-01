@@ -2,7 +2,16 @@
 import React from "react";
 import { useNavigate, Navigate } from "react-router-dom";
 
-const adminList = ['jlcastillog', 'admin', 'root', 'admin2'];
+// Simulate a backend user list
+const adminList = [
+  { username: "admin", role: "admin", isAdmin: true },
+  { username: "jlcastillog", role: "admin", isAdmin: true },
+  { username: "testuser", role: "user", isAdmin: false },
+  { username: "guestuser", role: "guest", isAdmin: false },
+];
+
+// Simulate a backend role list
+const rolesList = ["admin", "user", "guest"];
 
 const AuthContext = React.createContext();
 
@@ -11,14 +20,18 @@ function AuthProvider({ children }) {
   const [user, setUser] = React.useState(null);
 
   const login = (username) => {
-    const isAdmin = adminList.includes(username);
-    setUser({username, isAdmin});
-    navigate('/profile');
+    const user = adminList.find((user) => user.username === username);
+    if (user === undefined) {
+      navigate("/error-login");
+    } else {
+      setUser(user);
+      navigate("/profile");
+    }
   };
 
   const logout = () => {
     setUser(null);
-    navigate('/')
+    navigate("/");
   };
 
   const auth = { user, login, logout };
@@ -34,7 +47,7 @@ function useAuth() {
   return context;
 }
 
-function AuthRoute (props) {
+function AuthRoute(props) {
   const auth = useAuth();
 
   if (!auth.user) {

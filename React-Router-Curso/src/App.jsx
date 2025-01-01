@@ -6,6 +6,7 @@ import { ProfilePage } from "./Pages/ProfilePage";
 import { LoginPage } from "./Pages/LoginPage";
 import { LogoutPage } from "./Pages/LogoutPage";
 import { BlogPost } from "./Components/BlogPost";
+import { LoginErrorPage } from "./Pages/LoginErrorPage";
 import { AuthProvider, AuthRoute } from "./Components/Auth";
 import "./App.css";
 
@@ -37,6 +38,7 @@ function App() {
                 </AuthRoute>
               }
             />
+            <Route path="/error-login" element={<LoginErrorPage />} />
             <Route path="*" element={<p>Not found</p>} />
           </Routes>
         </AuthProvider>
