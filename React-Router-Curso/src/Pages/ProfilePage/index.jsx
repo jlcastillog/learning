@@ -6,7 +6,7 @@ function ProfilePage() {
   return (
     <>
       <h1>Proflie</h1>
-      <p>Wellcome, {auth?.user}</p>
+      <p>Wellcome, {auth?.user?.username}</p>
     </>
   );
 }

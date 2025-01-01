@@ -2,6 +2,8 @@
 import React from "react";
 import { useNavigate, Navigate } from "react-router-dom";
 
+const adminList = ['jlcastillog', 'admin', 'root', 'admin2'];
+
 const AuthContext = React.createContext();
 
 function AuthProvider({ children }) {
@@ -9,7 +11,8 @@ function AuthProvider({ children }) {
   const [user, setUser] = React.useState(null);
 
   const login = (username) => {
-    setUser(username);
+    const isAdmin = adminList.includes(username);
+    setUser({username, isAdmin});
     navigate('/profile');
   };
 
