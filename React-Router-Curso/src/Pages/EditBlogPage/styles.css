@@ -1,0 +1,26 @@
+.edit-blog-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.edit-blog-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.edit-blog-form textarea {
+    width: 250px;
+    height: 200px;
+    resize: none;
+}
