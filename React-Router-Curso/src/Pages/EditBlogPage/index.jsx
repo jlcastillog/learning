@@ -1,10 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
+import { useAuth } from "../../Components/Auth";
 import { blogdata } from "../../Components/BlogPost/blogdata";
 
+
 function EditBlogPage() {
+  const auth = useAuth();
   const { slug } = useParams();
 
   const blogpost = blogdata.find((post) => post.slug === slug);
+
+  if (!auth?.user?.isAdmin && auth?.user?.username !== blogpost.author && auth?.user?.role !== "editor"){
+    return <Navigate to={`/blog/${blogpost.slug}`} />;
+ }
 
   const updateBlogPost = (e) => {
     e.preventDefault();
