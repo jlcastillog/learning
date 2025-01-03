@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
-import { useAuth } from "../../Components/Auth";
-import { blogdata } from "../../Components/BlogPost/blogdata";
+import { useAuth } from "../../components/Auth";
+import { blogdata } from "../../components/BlogPost/blogdata";
 import "./styles.css";
 
 function EditBlogPage() {

@@ -1,4 +1,4 @@
-import { useAuth } from "../../Components/Auth";
+import { useAuth } from "../../components/Auth";
 
 function ProfilePage() {
   const auth = useAuth();

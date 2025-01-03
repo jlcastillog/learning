@@ -1,4 +1,4 @@
-import { useAuth } from "../../Components/Auth";
+import { useAuth } from "../../components/Auth";
 import "./styles.css";
 
 function LogoutPage() {
