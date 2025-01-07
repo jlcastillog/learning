@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { blogdata } from '../../components/BlogPost/blogdata'
+import "./styles.css";
 
 function BlogPage() {
   return (
-    <>
+    <section className='blog-page'>
       <h1>BlogPage</h1>
       
       <ul>
@@ -11,7 +12,7 @@ function BlogPage() {
           <BlogLink key={post.slug} post={post} />
         ))}
       </ul>
-    </>
+    </section>
   );
 }
 

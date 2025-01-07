@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../Auth";
+import "./styles.css";
 
 function Menu() {
   const auth = useAuth();
 
   return (
-    <nav>
+    <nav className="menu">
       <ul>
         {routes.map((route) => {
           if (route.private && !auth.user) {
@@ -16,7 +17,7 @@ function Menu() {
           }
           return (
             <li key={route.to}>
-              <NavLink to={route.to} end>
+              <NavLink className="link" to={route.to} end>
                 {route.text}
               </NavLink>
             </li>
