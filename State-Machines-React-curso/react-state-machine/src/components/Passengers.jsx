@@ -18,11 +18,19 @@ export const Passengers = ({ state, send }) => {
     changeValue("");
   };
 
+  const { passengers } = state?.context;
+
   return (
     <form onSubmit={submit} className="Passengers">
       <p className="Passengers-title title">
         Agrega a las personas que van a volar ✈️
       </p>
+      {passengers?.length > 0 &&
+        passengers?.map((passenger, index) => (
+          <p className="text" key={`person-${index}`}>
+            {passenger}
+          </p>
+        ))}
       <input
         id="name"
         name="name"
