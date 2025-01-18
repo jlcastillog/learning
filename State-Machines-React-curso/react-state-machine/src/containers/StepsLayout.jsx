@@ -1,8 +1,8 @@
 import React from 'react';
-import { Welcome } from '../Components/Welcome';
-import { Search } from '../Components/Search';
-import { Passengers } from '../Components/Passengers';
-import { Tickets } from '../Components/Tickets';
+import { Welcome } from '../components/Welcome';
+import { Search } from '../components/Search';
+import { Passengers } from '../components/Passengers';
+import { Tickets } from '../components/Tickets';
 import './StepsLayout.css';
 
 export const StepsLayout = ({ state, send }) => {
